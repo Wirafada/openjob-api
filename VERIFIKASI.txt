@@ -1,0 +1,10 @@
+Verifikasi revisi migrasi:
+- 14 scaffold dihasilkan CLI node-pg-migrate 9.0.0 asli. Log generator dilampirkan.
+- Timestamp unik, berurutan; definisi skema dan urutan sama dengan sumber.
+- Migrasi menggunakan CommonJS sesuai type package.json.
+- Seluruh file src dan migration lolos node --check.
+- Uji runner node-pg-migrate + PGlite: up 14, no-op up, down 14, up 14 kembali: PASS.
+- Instalasi npm ci API berhasil pada runtime ini (lifecycle scripts dinonaktifkan).
+- Kode src API dan consumer tidak diubah oleh revisi migrasi.
+- Koneksi Windows PostgreSQL, Redis, RabbitMQ, SMTP belum diuji di runtime ini.
+- Runner 421 assertion perlu dijalankan ulang pengguna pada database baru.

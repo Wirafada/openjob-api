@@ -1,0 +1,72 @@
+[
+  {
+    "old_name": "1792659651553_create-table-users.js",
+    "generated_name": "1794703118518_create-table-users.js",
+    "sha256": "d024184f0647fbb3374d5ddbfe2ac4bd2d234a4b37e1d659399b51f39f399027"
+  },
+  {
+    "old_name": "1792723957489_create-table-authentications.js",
+    "generated_name": "1794703118925_create-table-authentications.js",
+    "sha256": "d3a62a203cda3dab2befffb9f4195506a1111a9afb2beb3474433fbbeb024be5"
+  },
+  {
+    "old_name": "1792727601714_create-table-companies.js",
+    "generated_name": "1794703119298_create-table-companies.js",
+    "sha256": "8f1163e4926568b2297bbb8547f5b9e516cd38106a3fe769847561637f5b2f85"
+  },
+  {
+    "old_name": "1793159386888_create-table-categories.js",
+    "generated_name": "1794703119588_create-table-categories.js",
+    "sha256": "e815fcbe40675cdd084a28c84e68c1dabb7dc110251861affa9a21aace2ddc09"
+  },
+  {
+    "old_name": "1793162054843_create-table-jobs.js",
+    "generated_name": "1794703119908_create-table-jobs.js",
+    "sha256": "c5f2ff5b4c80a4b9fd919404bfde7dbeafad13ef007d608210d5d5a1082ba84c"
+  },
+  {
+    "old_name": "1793173981094_create-table-bookmarks.js",
+    "generated_name": "1794703120191_create-table-bookmarks.js",
+    "sha256": "027e011560565f290d71786e13717b306636160593704dd6dfa4510802c24baf"
+  },
+  {
+    "old_name": "1793176433187_create-table-applications.js",
+    "generated_name": "1794703120506_create-table-applications.js",
+    "sha256": "a7023ba92983e7cd8b8c4bac5c199c6f0ba11a2adecb00d55678d947a1c4b71c"
+  },
+  {
+    "old_name": "1793604878132_make-application-resume-optional.js",
+    "generated_name": "1794703120812_make-application-resume-optional.js",
+    "sha256": "dcda03f2dff7dfbf6e2b5283814c0ec936365655fe10ce7713bc58e4b403b246"
+  },
+  {
+    "old_name": "1793605933713_fix-resume-url-nullable.js",
+    "generated_name": "1794703121113_fix-resume-url-nullable.js",
+    "sha256": "af964c4cb11e2b814b926cd5c9098a3437747b04635910393f3e850d5952dd75"
+  },
+  {
+    "old_name": "1794050000000_create-table-documents.js",
+    "generated_name": "1794703121426_create-table-documents.js",
+    "sha256": "664fb238bf328ffe0a0e454631a1f3afe7dbe9fb5ce8d04ef256d78c30ea3a55"
+  },
+  {
+    "old_name": "1794146829398_add-job-creator.js",
+    "generated_name": "1794703121714_add-job-creator.js",
+    "sha256": "ccafa1e8be3c7352fb9c3eb323f14a7f79f11ff10878d596ed30c87b3fb06738"
+  },
+  {
+    "old_name": "1794147000000_create-notification-outbox.js",
+    "generated_name": "1794703121993_create-notification-outbox.js",
+    "sha256": "b482bf0c8d7e8e9366bac407aaffc9ec96ccecdaad7112d12ef86cecfa4bc068"
+  },
+  {
+    "old_name": "1794148000000_create-notification-deliveries.js",
+    "generated_name": "1794703122281_create-notification-deliveries.js",
+    "sha256": "a73dd4a3d3a606400dd6eda08954bc26d77ace993ce13618dff825888c3077c7"
+  },
+  {
+    "old_name": "1794650000000_add-resource-updated-at.js",
+    "generated_name": "1794703122603_add-resource-updated-at.js",
+    "sha256": "8e1cfa1286a32e7fe35899e3e3e17742bd3ca2baceef0a739a31025dc05b066c"
+  }
+]
