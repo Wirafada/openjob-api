@@ -1,0 +1,43 @@
+REVISI MIGRASI OPENJOB V2
+
+14 file migrasi dibuat melalui CLI node-pg-migrate create (versi 9.0.0).
+Timestamp dihasilkan tool saat dijalankan, tidak diganti secara manual.
+Definisi skema dipertahankan, ekspor migrasi diseragamkan ke CommonJS
+agar sesuai package.json. Log generator dan pemetaan nama dilampirkan.
+
+PENTING: NAMA MIGRASI BERUBAH. GUNAKAN DATABASE PENGUJIAN BARU.
+Jangan menjalankan migrasi revisi pada database lama. Jangan hapus database lama.
+
+1. Ekstrak paket ke folder baru. Hentikan server, publisher, consumer proyek lama.
+2. Buat database baru melalui pgAdmin (Query Tool pada database postgres):
+   CREATE DATABASE openjob_v2_migration_revision;
+   Jalankan satu kali. Jika nama itu sudah terpakai, pilih nama baru lainnya.
+3. Salin .env lama ke openjob_api/.env dan openjob_consumer/.env.
+   Pada KEDUANYA ubah hanya PGDATABASE ke openjob_v2_migration_revision
+   (atau nama database baru yang Anda buat). Pertahankan konfigurasi lain.
+4. Terminal pada openjob_api:
+   npm.cmd ci
+   npm.cmd run migrate up
+   Pastikan Migrations complete! muncul.
+5. Aktifkan Redis/RabbitMQ di WSL jika belum aktif.
+6. Tiga terminal terpisah:
+   - folder openjob_api: npm.cmd run start:dev
+   - folder openjob_api: npm.cmd run start:publisher
+   - folder openjob_consumer: npm.cmd ci, kemudian npm.cmd start
+7. Jalankan ulang collection V2, environment dan port seperti sebelumnya.
+   Documents diuji manual. Database baru tidak berisi akun lama;
+   gunakan seluruh setup/register dalam collection sebelum login.
+8. Setelah lulus, unggah ZIP revisi ini jika source tidak berubah.
+   Jangan sertakan .env asli, node_modules, atau PDF pribadi.
+
+CATATAN CACHE
+Kode Redis semula tidak memiliki pemilihan REDIS_DB; jangan mengandalkan
+REDIS_DB tanpa dukungan kode. Paket ini mempertahankan kode cache.
+Cache memakai ID unik sehingga run dengan resource baru tidak berbagi ID lama.
+Jangan menggunakan ID pengguna/resource database lama pada database baru.
+
+BATAS HASIL TES
+Migrasi up 14, up ulang tanpa perubahan, down 14, dan up kembali telah diuji
+menggunakan runner node-pg-migrate asli dengan PGlite (PostgreSQL tertanam).
+Ini bukan pengujian koneksi PostgreSQL Windows Anda.
+421/421 assertion adalah hasil sebelum revisi nama migrasi; perlu run ulang.
